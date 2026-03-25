@@ -18,7 +18,7 @@ async function main() {
   const options = parseArgs(process.argv);
 
   console.log();
-  console.log('  🔬 github-explode — The Codebase Doctor');
+  console.log('  🔬 reposcan — The Codebase Doctor');
   console.log();
 
   // Resolve input (clone or local)

@@ -176,7 +176,7 @@ export function renderTerminalReport(report: ExplodeReport): void {
 
   // Footer
   console.log(chalk.dim('  ─'.repeat(30)));
-  console.log(chalk.dim('  github-explode v0.1.0 — The Codebase Doctor'));
-  console.log(chalk.dim('  https://github.com/nicolai/github-explode'));
+  console.log(chalk.dim('  reposcan v0.1.0 — The Codebase Doctor'));
+  console.log(chalk.dim('  https://github.com/nicolai/reposcan'));
   console.log();
 }

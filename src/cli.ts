@@ -5,7 +5,7 @@ export function parseArgs(argv: string[]): ExplodeOptions {
   const program = new Command();
 
   program
-    .name('github-explode')
+    .name('reposcan')
     .description('The Codebase Doctor — scan any repo and get a full health report')
     .version('0.1.0')
     .argument('<target>', 'GitHub URL or local path to analyze')

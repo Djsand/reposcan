@@ -1,4 +1,4 @@
-# github-explode
+# reposcan
 
 ### The Codebase Doctor
 
@@ -6,14 +6,14 @@
 
 ![Codebase Health: A](https://img.shields.io/badge/codebase_health-A-brightgreen)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://img.shields.io/npm/v/github-explode.svg)](https://www.npmjs.com/package/github-explode)
+[![npm version](https://img.shields.io/npm/v/reposcan.svg)](https://www.npmjs.com/package/reposcan)
 
 ```
-npx github-explode https://github.com/your/repo
+npx reposcan https://github.com/your/repo
 ```
 
 ```
-  🔬 github-explode — The Codebase Doctor
+  🔬 reposcan — The Codebase Doctor
 
    ██████╗
   ██╔════╝
@@ -79,25 +79,25 @@ Four health scores (0-100) plus an overall **A-F grade**:
 ### Scan a GitHub repo
 
 ```bash
-npx github-explode https://github.com/vercel/next.js
+npx reposcan https://github.com/vercel/next.js
 ```
 
 ### Scan a local project
 
 ```bash
-npx github-explode ./my-project
+npx reposcan ./my-project
 ```
 
 ### Generate an HTML report
 
 ```bash
-npx github-explode ./my-project --html report.html
+npx reposcan ./my-project --html report.html
 ```
 
 ### Get a README badge
 
 ```bash
-npx github-explode ./my-project --badge
+npx reposcan ./my-project --badge
 ```
 
 ### AI-enhanced analysis (optional)
@@ -106,7 +106,7 @@ Set your Anthropic API key for deeper, semantic analysis powered by Claude:
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
-npx github-explode ./my-project
+npx reposcan ./my-project
 ```
 
 Without an API key, the tool runs in **static-analysis mode** — all heuristic checks work, you just don't get the AI-powered semantic analysis.

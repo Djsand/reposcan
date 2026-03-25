@@ -36,7 +36,7 @@ function cloneRepo(url: string): RepoInput {
   const parts = cleanUrl.split('/');
   const repoName = parts[parts.length - 1] || 'repo';
 
-  const tempDir = mkdtempSync(join(tmpdir(), 'github-explode-'));
+  const tempDir = mkdtempSync(join(tmpdir(), 'reposcan-'));
   const clonePath = join(tempDir, repoName);
 
   try {
