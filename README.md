@@ -53,6 +53,34 @@ There was no open-source tool to scan a codebase and answer: *"How healthy is th
 
 Now there is.
 
+## Getting Started
+
+### Quick start (no install)
+
+```bash
+npx reposcan https://github.com/your/repo
+```
+
+### Install globally
+
+```bash
+npm install -g reposcan
+reposcan ./my-project
+```
+
+### Install as a dev dependency
+
+```bash
+npm install --save-dev reposcan
+npx reposcan .
+```
+
+### Requirements
+
+- **Node.js** 18 or later
+- **git** (for scanning GitHub URLs)
+- **Anthropic API key** (optional — for AI-enhanced analysis)
+
 ## What it finds
 
 | Category | What it detects |

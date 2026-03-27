@@ -11,7 +11,7 @@ import { renderTerminalReport } from './reporters/terminal.js';
 import { generateHtmlReport } from './reporters/html.js';
 import { generateBadge } from './reporters/badge.js';
 import { runAiAnalysis } from './ai/client.js';
-import type { ExplodeReport, ArchInfo } from './types.js';
+import type { ScanReport, ArchInfo } from './types.js';
 
 async function main() {
   const startTime = Date.now();
@@ -91,7 +91,7 @@ async function main() {
       entryPoints: findEntryPoints(files.map(f => f.relativePath)),
     };
 
-    const report: ExplodeReport = {
+    const report: ScanReport = {
       repoName: repo.repoName,
       repoPath: repo.path,
       analyzedAt: new Date().toISOString(),

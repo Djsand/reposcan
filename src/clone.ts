@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { basename, join, resolve } from 'node:path';
 
 const GITHUB_URL_RE = /^https?:\/\/github\.com\/[\w.-]+\/[\w.-]+/;
 
@@ -22,7 +22,7 @@ export function resolveInput(input: string): RepoInput {
     throw new Error(`Path does not exist: ${localPath}`);
   }
 
-  const repoName = localPath.split('/').pop() || 'unknown';
+  const repoName = basename(localPath) || 'unknown';
   return {
     path: localPath,
     isClone: false,

@@ -40,7 +40,7 @@ export interface ArchInfo {
   entryPoints: string[];
 }
 
-export interface ExplodeReport {
+export interface ScanReport {
   repoName: string;
   repoPath: string;
   analyzedAt: string;
@@ -52,7 +52,7 @@ export interface ExplodeReport {
   duration: number;
 }
 
-export interface ExplodeOptions {
+export interface ScanOptions {
   input: string;
   fix: boolean;
   html?: string;

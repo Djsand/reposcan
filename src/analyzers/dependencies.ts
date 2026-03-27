@@ -78,7 +78,7 @@ export function analyzeDependencies(repoPath: string): AnalyzerResult {
   // Try npm audit (if npm is available and node_modules exists)
   if (existsSync(join(repoPath, 'node_modules'))) {
     try {
-      const auditOutput = execSync('npm audit --json 2>/dev/null', {
+      const auditOutput = execSync('npm audit --json', {
         cwd: repoPath,
         timeout: 30_000,
         encoding: 'utf-8',

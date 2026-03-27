@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import Table from 'cli-table3';
-import type { ExplodeReport, TimeBomb, HealthScores } from '../types.js';
+import type { ScanReport, TimeBomb, HealthScores } from '../types.js';
 
 const GRADE_ART: Record<string, string[]> = {
   A: [
@@ -93,7 +93,7 @@ function timeBombTypeLabel(type: string): string {
   return labels[type] || type;
 }
 
-export function renderTerminalReport(report: ExplodeReport): void {
+export function renderTerminalReport(report: ScanReport): void {
   const { scores, timeBombs, arch, repoName, mode, duration } = report;
   const color = gradeColor(scores.grade);
 

@@ -1,5 +1,5 @@
 import { writeFileSync } from 'node:fs';
-import type { ExplodeReport, TimeBomb } from '../types.js';
+import type { ScanReport, TimeBomb } from '../types.js';
 
 function scoreBarHtml(score: number, label: string): string {
   let color: string;
@@ -72,7 +72,7 @@ function gradeColor(grade: string): string {
   }
 }
 
-export function generateHtmlReport(report: ExplodeReport, outputPath: string): void {
+export function generateHtmlReport(report: ScanReport, outputPath: string): void {
   const { scores, timeBombs, arch, repoName, mode, duration } = report;
 
   const html = `<!DOCTYPE html>

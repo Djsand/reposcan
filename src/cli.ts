@@ -1,7 +1,7 @@
 import { Command } from 'commander';
-import type { ExplodeOptions } from './types.js';
+import type { ScanOptions } from './types.js';
 
-export function parseArgs(argv: string[]): ExplodeOptions {
+export function parseArgs(argv: string[]): ScanOptions {
   const program = new Command();
 
   program

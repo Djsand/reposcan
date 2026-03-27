@@ -1,4 +1,4 @@
-# github-explode — The Codebase Doctor
+# reposcan — The Codebase Doctor
 
 ## Problem
 
@@ -16,10 +16,10 @@ The "vibe coding hangover" is the #1 developer pain point of 2026:
 A CLI tool that scans any GitHub repo (or local codebase) and generates a rich health report with scores, time bomb detection, architecture visualization, and auto-fix capabilities.
 
 ```
-npx github-explode https://github.com/vercel/next.js
-npx github-explode ./my-project
-npx github-explode ./my-project --fix
-npx github-explode ./my-project --badge
+npx reposcan https://github.com/vercel/next.js
+npx reposcan ./my-project
+npx reposcan ./my-project --fix
+npx reposcan ./my-project --badge
 ```
 
 ## Core Features
@@ -84,10 +84,10 @@ Each time bomb includes:
 ### 4. Fix Mode (`--fix`)
 
 ```
-npx github-explode ./my-project --fix
+npx reposcan ./my-project --fix
 ```
 
-Creates a new git branch (`explode/fixes`) with:
+Creates a new git branch (`reposcan/fixes`) with:
 - One commit per fix category (security, dead-code, naming, etc.)
 - Each commit message explains what was fixed and why
 - Developer can cherry-pick individual categories
@@ -119,7 +119,7 @@ The tool requires a Claude API key for AI-powered analysis. Key handling:
 - **Env var**: `ANTHROPIC_API_KEY` (standard convention)
 - **Graceful degradation**: Without an API key, the tool runs **static-analysis-only mode** — all heuristic checks work, scores are computed from static metrics only, and the report clearly labels itself as "Static Analysis Only" with a note that AI analysis is available with an API key
 - **Cost management**: Token budget capped at ~100K tokens per scan. Files are batched and summarized. A `--budget` flag allows users to set a custom limit
-- **Caching**: Analysis results are cached per file hash in `~/.github-explode/cache/`. Unchanged files skip re-analysis on subsequent runs
+- **Caching**: Analysis results are cached per file hash in `~/.cache/reposcan/`. Unchanged files skip re-analysis on subsequent runs
 
 ### Repo Cloning
 
@@ -175,7 +175,7 @@ Input (URL or path)
 ### File Structure
 
 ```
-github-explode/
+reposcan/
 ├── package.json
 ├── tsconfig.json
 ├── src/
@@ -240,7 +240,7 @@ For the initial launch that can go viral:
 
 ## Viral Strategy
 
-1. **Zero friction**: `npx github-explode <url>` — nothing to install
+1. **Zero friction**: `npx reposcan <url>` — nothing to install
 2. **Run on famous repos**: Pre-generate reports for React, Next.js, OpenClaw, etc. Include in README
 3. **Shareable scores**: Badges for READMEs, HTML reports for social sharing
 4. **Controversial by nature**: "Your codebase has 47 time bombs" — guaranteed engagement
